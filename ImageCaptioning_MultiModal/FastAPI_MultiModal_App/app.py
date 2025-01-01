@@ -11,7 +11,7 @@ model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-capt
 
 app = FastAPI()
 
-#test
+#test123
 # Function to generate a caption using BLIP model
 def generate_caption(image: Image.Image) -> str:
     # Preprocess the image and generate caption
