@@ -1,0 +1,30 @@
+name: Sync FastAPI_MultiModal_App to Hugging Face Space
+
+on:
+  push:
+    paths:
+      - 'FastAPI_MultiModal_App/**'
+
+jobs:
+  sync-fastapi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Configure Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions Bot"
+      - name: Sync to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          cd FastAPI_MultiModal_App
+          git init
+          git branch -m main
+          git remote add origin https://user:$HF_TOKEN@huggingface.co/spaces/NihalK/FastAPI_MultiModal_App
+          git add .
+          git commit -m "Update FastAPI_MultiModal_App"
+          git push -f origin main
