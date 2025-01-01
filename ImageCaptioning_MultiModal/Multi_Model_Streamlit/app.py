@@ -4,7 +4,7 @@ from PIL import Image
 from io import BytesIO
 
 st.title("Image Captioning App")
-#test123456
+#test123
 # Upload image
 uploaded_image = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
