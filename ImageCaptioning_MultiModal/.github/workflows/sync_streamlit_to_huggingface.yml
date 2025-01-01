@@ -3,7 +3,7 @@ name: Sync Multi_Model_Streamlit to Hugging Face Space
 on:
   push:
     paths:
-      - 'Multi_Model_Streamlit/**'
+      - 'ImageCaptioning_MultiModal/Multi_Model_Streamlit/**'  # Updated path
 
 jobs:
   sync-streamlit:
@@ -21,7 +21,7 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          cd Multi_Model_Streamlit
+          cd ImageCaptioning_MultiModal/Multi_Model_Streamlit  # Updated path
           git init
           git branch -m main
           git remote add origin https://user:$HF_TOKEN@huggingface.co/spaces/NihalK/Multi_Model_Streamlit

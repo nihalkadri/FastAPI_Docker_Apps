@@ -3,7 +3,7 @@ name: Sync FastAPI_MultiModal_App to Hugging Face Space
 on:
   push:
     paths:
-      - 'FastAPI_MultiModal_App/**'
+      - 'ImageCaptioning_MultiModal/FastAPI_MultiModal_App/**'  # Updated path
 
 jobs:
   sync-fastapi:
@@ -21,7 +21,7 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          cd FastAPI_MultiModal_App
+          cd ImageCaptioning_MultiModal/FastAPI_MultiModal_App  # Updated path
           git init
           git branch -m main
           git remote add origin https://user:$HF_TOKEN@huggingface.co/spaces/NihalK/FastAPI_MultiModal_App
