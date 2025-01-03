@@ -1,6 +1,7 @@
 # FastAPI_Docker_Apps
 This repository showcases projects that integrate FastAPI, Streamlit, Docker, Hugging Face Spaces, and GitHub Actions for deploying machine learning applications. It demonstrates how these technologies can be combined for scalable and efficient app deployment.
 
+## HuggingFace Deployed App Link : **https://huggingface.co/spaces/NihalK/Multi_Model_Streamlit**
 ## ImageCaptioning_MultiModal
 The ImageCaptioning_MultiModal project is an image captioning application that uses FastAPI for the backend, Streamlit for the frontend, and the BLIP model for generating captions from uploaded images. The entire app is containerized with Docker and deployed on Hugging Face Spaces for easy access. GitHub Actions automates the deployment process.
 
